@@ -1,25 +1,22 @@
 'use strict';
 
-let message = prompt('Please, enter some number');
+let message;
 let input;
 const numbers = [];
 
 function arrayNumbersSum(numbers) {
+  let total = 0;
 
-  for (let i = 0; i += 1;) {
+  do {
+    message = prompt('Please, enter some number');
     input = Number(message);
     numbers.push(input);
-    let total = 0;
+    total += Number(input);
 
-    for (let j = 0; j < numbers.length; j++) {
-      total += numbers[j];
-      }
+  } while (Number(input));
 
-    message = prompt('Please, enter some number');
-
-    if(message === null && numbers.length !== 0) {
-      alert(`Общая сумма чисел равна ${total}`); break;
-    }
+  if(message === null && numbers.length !== 0) {
+    alert(`Общая сумма чисел равна ${total}`);
   }
 }
 arrayNumbersSum(numbers);
